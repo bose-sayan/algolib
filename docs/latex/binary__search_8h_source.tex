@@ -1,0 +1,26 @@
+\doxysection{binary\+\_\+search.\+h}
+\hypertarget{binary__search_8h_source}{}\label{binary__search_8h_source}\index{include/searching/binary\_search.h@{include/searching/binary\_search.h}}
+\mbox{\hyperlink{binary__search_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BINARY\_SEARCH\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BINARY\_SEARCH\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{binary__search_8h_ae16f5041af55d950f222b691e5bde6e6}{binary\_search}}(std::vector<T>\ \textcolor{keyword}{const}\ \&v,\ T\ key)\ \{}
+\DoxyCodeLine{00021\ \ \ \textcolor{keywordtype}{int}\ l\ =\ 0,\ h\ =\ int(v.size())\ -\/\ 1;}
+\DoxyCodeLine{00022\ \ \ \textcolor{keywordflow}{while}\ (l\ <=\ h)\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ m\ =\ l\ +\ (h\ -\/\ l)\ /\ 2;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{if}\ (v[m]\ ==\ key)}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{if}\ (v[m]\ <\ key)}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ l\ =\ m\ +\ 1;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ h\ =\ m\ -\/\ 1;}
+\DoxyCodeLine{00030\ \ \ \}}
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00032\ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BINARY\_SEARCH\_H}}
+
+\end{DoxyCode}

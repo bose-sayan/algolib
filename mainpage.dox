@@ -1,0 +1,23 @@
+/**
+ * @mainpage algolib Documentation
+ *
+ * @section intro_sec Introduction
+ *
+ * Welcome to the algolib documentation. This library provides various algorithms and data structures
+ * useful for competitive programming and general algorithmic tasks. 
+ * Check out all documentation by navigating to the files section.
+ *
+ * @section usage_sec Usage
+ *
+ * Here's an example of how to use the binary search function:
+ * @code
+ * #include "algorithms/searching/binary_search.h"
+ *
+ * int main() {
+ *     std::vector<int> arr = {1, 2, 3, 4, 5};
+ *     int index = binary_search(arr, 3);
+ *     std::cout << "Index of 3: " << index << std::endl;
+ *     return 0;
+ * }
+ * @endcode
+ */

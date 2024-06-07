@@ -1,0 +1,53 @@
+\doxysection{include/searching/binary\+\_\+search.h File Reference}
+\hypertarget{binary__search_8h}{}\label{binary__search_8h}\index{include/searching/binary\_search.h@{include/searching/binary\_search.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for binary\+\_\+search.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{binary__search_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{binary__search_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{binary__search_8h_ae16f5041af55d950f222b691e5bde6e6}{binary\+\_\+search}} (std\+::vector$<$ T $>$ const \&v, T key)
+\begin{DoxyCompactList}\small\item\em Performs a binary search on a sorted vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{binary__search_8h_ae16f5041af55d950f222b691e5bde6e6}\label{binary__search_8h_ae16f5041af55d950f222b691e5bde6e6} 
+\index{binary\_search.h@{binary\_search.h}!binary\_search@{binary\_search}}
+\index{binary\_search@{binary\_search}!binary\_search.h@{binary\_search.h}}
+\doxysubsubsection{\texorpdfstring{binary\_search()}{binary\_search()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int binary\+\_\+search (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ const \&}]{v,  }\item[{T}]{key }\end{DoxyParamCaption})}
+
+
+
+Performs a binary search on a sorted vector. 
+
+This function performs a binary search on a sorted vector to find the index of a given key. If the key is not present in the vector, the function returns -\/1.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements in the vector. The type T must support comparison operators. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The sorted vector in which to search for the key. \\
+\hline
+{\em key} & The value to search for in the vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The index of the key in the vector if found, otherwise -\/1. 
+\end{DoxyReturn}
