@@ -1,11 +1,14 @@
 <map id="tests/searching_tests.cpp" name="tests/searching_tests.cpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="45,5,232,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="125,5,312,31"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,79,75,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,33,69,73,66,68,121,29"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,33,83,76,81,71,189,28"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="99,79,179,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="141,31,141,65,136,65,136,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="208,33,164,72,160,68,204,29"/>
 <area shape="rect" id="Node000004" href="$binary__search_8h.html" title=" " alt="" coords="203,79,395,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="165,28,261,71,259,75,163,33"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="267,152,330,177"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="301,104,301,138,296,138,296,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="233,29,277,68,274,72,230,33"/>
+<area shape="rect" id="Node000006" href="$linear__search_8h.html" title=" " alt="" coords="419,79,607,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="267,28,453,73,452,78,265,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="374,152,437,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="317,102,378,142,375,147,314,106"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="497,106,436,147,433,142,495,102"/>
 </map>

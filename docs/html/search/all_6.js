@@ -5,6 +5,6 @@ var searchData=
   ['info_5flanguage_5fextensions_5fdefault_2',['info_language_extensions_default',['../CMakeCCompilerId_8c.html#a0f46a8a39e09d9b803c4766904fd7e99',1,'info_language_extensions_default:&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#a0f46a8a39e09d9b803c4766904fd7e99',1,'info_language_extensions_default:&#160;CMakeCXXCompilerId.cpp']]],
   ['info_5flanguage_5fstandard_5fdefault_3',['info_language_standard_default',['../CMakeCCompilerId_8c.html#a4607cccf070750927b458473ca82c090',1,'info_language_standard_default:&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#a4607cccf070750927b458473ca82c090',1,'info_language_standard_default:&#160;CMakeCXXCompilerId.cpp']]],
   ['info_5fplatform_4',['info_platform',['../CMakeCCompilerId_8c.html#a2321403dee54ee23f0c2fa849c60f7d4',1,'info_platform:&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#a2321403dee54ee23f0c2fa849c60f7d4',1,'info_platform:&#160;CMakeCXXCompilerId.cpp']]],
-  ['installation_5',['installation',['../index.html#install_sec',1,'Installation'],['../md_README.html#autotoc_md3',1,'Installation']]],
+  ['installation_5',['Installation',['../md_README.html#autotoc_md3',1,'']]],
   ['introduction_6',['introduction',['../index.html#intro_sec',1,'Introduction'],['../md_README.html#autotoc_md2',1,'Introduction']]]
 ];
