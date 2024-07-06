@@ -26,7 +26,7 @@ git clone https://github.com/your-username/algolib.git
 
 Once you have cloned the repository, you can explore the different algorithms available in the `src` directory. Each algorithm is implemented in a separate file, making it easy to understand and use.
 
-To run the algorithms, navigate to the respective language directory and execute the corresponding file. For example, if you want to run the binary search algorithm, you can do the following:
+To run the algorithms, navigate to the respective directory and execute the corresponding file. For example, if you want to run the binary search algorithm, you can do the following:
 
 1. Modify the `src/main.cpp` file to call the binary_search function.
 2. Use CMake to build the project

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linear_5fsearch_0',['linear_search',['../linear__search_8h.html#a0d0ba3f44fc6dfe8e72c876376934041',1,'linear_search.h']]]
+  ['compute_5fprefix_5ffunction_0',['compute_prefix_function',['../kmp_8h.html#a1ed48cea7b65f929164f427655f88d94',1,'kmp.h']]]
 ];

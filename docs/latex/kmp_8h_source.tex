@@ -1,0 +1,52 @@
+\doxysection{kmp.\+h}
+\hypertarget{kmp_8h_source}{}\label{kmp_8h_source}\index{include/strings/kmp.h@{include/strings/kmp.h}}
+\mbox{\hyperlink{kmp_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ KMP\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ KMP\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <numeric>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00020\ vector<int>\ \mbox{\hyperlink{kmp_8h_a1ed48cea7b65f929164f427655f88d94}{compute\_prefix\_function}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&s)\ \{}
+\DoxyCodeLine{00021\ \ \ \textcolor{keywordtype}{int}\ n\ =\ int(s.length());}
+\DoxyCodeLine{00022\ \ \ vector<int>\ pref(n);}
+\DoxyCodeLine{00023\ \ \ \textcolor{keywordflow}{if}\ (!n)}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{return}\ pref;}
+\DoxyCodeLine{00025\ \ \ pref[0]\ =\ 0;}
+\DoxyCodeLine{00026\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ n;\ i++)\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ toExtendIdx\ =\ i\ -\/\ 1;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{while}\ (toExtendIdx\ >=\ 0)\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ longestPrefLen\ =\ pref[toExtendIdx];}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s[i]\ ==\ s[longestPrefLen])\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ pref[i]\ =\ longestPrefLen\ +\ 1;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ toExtendIdx\ =\ longestPrefLen\ -\/\ 1;}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordflow}{return}\ pref;}
+\DoxyCodeLine{00038\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00055\ vector<int>\ \mbox{\hyperlink{kmp_8h_a8ba12a8a05528a46cd0fb2dacb97fe2b}{kmp}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&text,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&pattern)\ \{}
+\DoxyCodeLine{00056\ \ \ \textcolor{keywordflow}{if}\ (pattern.empty())\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ vector<int>\ matches(text.length()\ +\ 1);}
+\DoxyCodeLine{00058\ \ \ \ \ iota(matches.begin(),\ matches.end(),\ 0);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{return}\ matches;}
+\DoxyCodeLine{00060\ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{string}\ s\ =\ pattern\ +\ \textcolor{stringliteral}{"{}\#"{}}\ +\ text;}
+\DoxyCodeLine{00062\ \ \ vector<int>\ pref\ =\ \mbox{\hyperlink{kmp_8h_a1ed48cea7b65f929164f427655f88d94}{compute\_prefix\_function}}(s);}
+\DoxyCodeLine{00063\ \ \ vector<int>\ matches;}
+\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{int}\ n\ =\ int(text.length()),\ m\ =\ int(pattern.length());}
+\DoxyCodeLine{00065\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ m\ +\ 1;\ i\ <\ m\ +\ 1\ +\ n;\ i++)\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{if}\ (pref[i]\ ==\ m)}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ matches.push\_back(i\ -\/\ 2\ *\ m);}
+\DoxyCodeLine{00068\ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \textcolor{keywordflow}{return}\ matches;}
+\DoxyCodeLine{00070\ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ KMP\_H}}
+
+\end{DoxyCode}

@@ -63,6 +63,6 @@ void test_linear_search() {
 int main() {
   test_binary_search();
   test_linear_search();
-  std::cout << "All tests passed!" << std::endl;
+  std::cout << "Searching tests passed!" << std::endl;
   return 0;
 }

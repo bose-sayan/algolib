@@ -1,0 +1,71 @@
+\doxysection{include/strings/kmp.h File Reference}
+\hypertarget{kmp_8h}{}\label{kmp_8h}\index{include/strings/kmp.h@{include/strings/kmp.h}}
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for kmp.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{kmp_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{kmp_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{kmp_8h_a1ed48cea7b65f929164f427655f88d94}{compute\+\_\+prefix\+\_\+function}} (const string \&s)
+\begin{DoxyCompactList}\small\item\em Computes the prefix function of a string. \end{DoxyCompactList}\item 
+vector$<$ int $>$ \mbox{\hyperlink{kmp_8h_a8ba12a8a05528a46cd0fb2dacb97fe2b}{kmp}} (const string \&text, const string \&pattern)
+\begin{DoxyCompactList}\small\item\em Finds all occurrences of a pattern in a text using the Knuth-\/\+Morris-\/\+Pratt algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{kmp_8h_a1ed48cea7b65f929164f427655f88d94}\label{kmp_8h_a1ed48cea7b65f929164f427655f88d94} 
+\index{kmp.h@{kmp.h}!compute\_prefix\_function@{compute\_prefix\_function}}
+\index{compute\_prefix\_function@{compute\_prefix\_function}!kmp.h@{kmp.h}}
+\doxysubsubsection{\texorpdfstring{compute\_prefix\_function()}{compute\_prefix\_function()}}
+{\footnotesize\ttfamily vector$<$ int $>$ compute\+\_\+prefix\+\_\+function (\begin{DoxyParamCaption}\item[{const string \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Computes the prefix function of a string. 
+
+This function computes the prefix function of a string. The prefix function of a string is an array of integers where the i-\/th element is the length of the longest proper prefix of the substring s\mbox{[}0..i\mbox{]} which is also a suffix of this substring.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The string for which to compute the prefix function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$int$>$ The prefix function of the string. 
+\end{DoxyReturn}
+\Hypertarget{kmp_8h_a8ba12a8a05528a46cd0fb2dacb97fe2b}\label{kmp_8h_a8ba12a8a05528a46cd0fb2dacb97fe2b} 
+\index{kmp.h@{kmp.h}!kmp@{kmp}}
+\index{kmp@{kmp}!kmp.h@{kmp.h}}
+\doxysubsubsection{\texorpdfstring{kmp()}{kmp()}}
+{\footnotesize\ttfamily vector$<$ int $>$ kmp (\begin{DoxyParamCaption}\item[{const string \&}]{text,  }\item[{const string \&}]{pattern }\end{DoxyParamCaption})}
+
+
+
+Finds all occurrences of a pattern in a text using the Knuth-\/\+Morris-\/\+Pratt algorithm. 
+
+This function finds all occurrences of a pattern in a text using the Knuth-\/\+Morris-\/\+Pratt algorithm. The function returns a vector of integers where each integer is the starting index of an occurrence of the pattern in the text.
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & The text in which to search for the pattern. \\
+\hline
+{\em pattern} & The pattern to search for in the text. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$int$>$ A vector of integers where each integer is the starting index of an occurrence of the pattern in the text. 
+\end{DoxyReturn}
