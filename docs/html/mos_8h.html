@@ -100,6 +100,7 @@ Include dependency graph for mos.h:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structQuery.html">Query</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A structure to represent a query on a range [l, r] This structure represents a query on a range [l, r]. The structure contains an id to identify the query and the left and right endpoints of the range.  <a href="structQuery.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -115,6 +116,7 @@ Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a70b27761c7d0bd5cd90f4fe47e569b94" id="r_a70b27761c7d0bd5cd90f4fe47e569b94"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mos_8h.html#a70b27761c7d0bd5cd90f4fe47e569b94">block_size</a></td></tr>
+<tr class="memdesc:a70b27761c7d0bd5cd90f4fe47e569b94"><td class="mdescLeft">&#160;</td><td class="mdescRight">The block size for Mo's algorithm.  <br /></td></tr>
 <tr class="separator:a70b27761c7d0bd5cd90f4fe47e569b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -155,7 +157,7 @@ Variables</h2></td></tr>
 <p>Answer multiple queries on a range [l, r] using Mo's algorithm This function answers multiple queries on a range [l, r] using Mo's algorithm. The queries are sorted in increasing order of the left endpoint and then in increasing order of the right endpoint. The function maintains a data structure that reflects the range [l, r] and updates it as it moves from one query to the next. The function returns a vector of answers to the queries. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">queries</td><td>A vector of <a class="el" href="structQuery.html">Query</a> objects representing the queries. </td></tr>
+    <tr><td class="paramname">queries</td><td>A vector of <a class="el" href="structQuery.html" title="A structure to represent a query on a range [l, r] This structure represents a query on a range [l,...">Query</a> objects representing the queries. </td></tr>
   </table>
   </dd>
 </dl>
@@ -193,6 +195,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The block size for Mo's algorithm. </p>
 
 </div>
 </div>

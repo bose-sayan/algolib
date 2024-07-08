@@ -6,8 +6,20 @@
 using namespace std;
 
 // Global
+
+/**
+ * @brief The block size for Mo's algorithm
+ */
 int block_size; // Todo: Set appropriate block size
 
+/**
+ * @brief A structure to represent a query on a range [l, r]
+ * This structure represents a query on a range [l, r]. The structure contains
+ an id to identify the query and the left and right endpoints of the range.
+ * @param l The left endpoint of the range.
+ * @param r The right endpoint of the range.
+ * @param id The id of the query.
+ */
 struct Query {
   int l, r, id;
   Query(int L, int R, int idx) {
