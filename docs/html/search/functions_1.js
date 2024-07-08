@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['compute_5fprefix_5ffunction_0',['compute_prefix_function',['../kmp_8h.html#a1ed48cea7b65f929164f427655f88d94',1,'kmp.h']]]
+  ['binary_5fsearch_0',['binary_search',['../binary__search_8h.html#ae16f5041af55d950f222b691e5bde6e6',1,'binary_search.h']]]
 ];

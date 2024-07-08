@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kmp_0',['kmp',['../kmp_8h.html#a8ba12a8a05528a46cd0fb2dacb97fe2b',1,'kmp.h']]]
+  ['compute_5fprefix_5ffunction_0',['compute_prefix_function',['../kmp_8h.html#a1ed48cea7b65f929164f427655f88d94',1,'kmp.h']]]
 ];
