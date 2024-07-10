@@ -1,0 +1,45 @@
+\doxysection{zorbrist.\+hpp}
+\hypertarget{zorbrist_8hpp_source}{}\label{zorbrist_8hpp_source}\index{include/hashing/zorbrist.hpp@{include/hashing/zorbrist.hpp}}
+\mbox{\hyperlink{zorbrist_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <numeric>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcustom__hash}{custom\_hash}}\ \{}
+\DoxyCodeLine{00020\ \ \ \textcolor{keyword}{static}\ uint64\_t\ \mbox{\hyperlink{structcustom__hash_afe49e83f3738e1d5a5df471e2b425d86}{splitmix64}}(uint64\_t\ x)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ x\ +=\ 0x9e3779b97f4a7c15;}
+\DoxyCodeLine{00022\ \ \ \ \ x\ =\ (x\ \string^\ (x\ >>\ 30))\ *\ 0xbf58476d1ce4e5b9;}
+\DoxyCodeLine{00023\ \ \ \ \ x\ =\ (x\ \string^\ (x\ >>\ 27))\ *\ 0x94d049bb133111eb;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{return}\ x\ \string^\ (x\ >>\ 31);}
+\DoxyCodeLine{00025\ \ \ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ uint64\_t\ \mbox{\hyperlink{structcustom__hash_a01fd3ddf456ca7014a6b157646836de7}{operator()}}(uint64\_t\ x)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint64\_t\ FIXED\_RANDOM\ =}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ chrono::steady\_clock::now().time\_since\_epoch().count();}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structcustom__hash_afe49e83f3738e1d5a5df471e2b425d86}{splitmix64}}(x\ +\ FIXED\_RANDOM);}
+\DoxyCodeLine{00031\ \ \ \}}
+\DoxyCodeLine{00032\ \}\ \mbox{\hyperlink{zorbrist_8hpp_a7ee09f60e416b7b80bff07f183119601}{rng}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00043\ vector<int>\ \mbox{\hyperlink{zorbrist_8hpp_a8ee5a6e6a584fbff8a9b9798395a05fa}{get\_hash}}(\textcolor{keyword}{const}\ vector<int>\ \&v)\ \{}
+\DoxyCodeLine{00044\ \ \ vector<int>\ hash(v.size());}
+\DoxyCodeLine{00045\ \ \ unordered\_set<int,\ custom\_hash>\ done;}
+\DoxyCodeLine{00046\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ v.size();\ i++)\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{if}\ (done.find(v[i])\ ==\ done.end())\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ done.insert(v[i]);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ hash[i]\ =\ \mbox{\hyperlink{zorbrist_8hpp_a7ee09f60e416b7b80bff07f183119601}{rng}}(v[i]);}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{if}\ (i)}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ hash[i]\ \string^=\ hash[i\ -\/\ 1];}
+\DoxyCodeLine{00053\ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \textcolor{keywordflow}{return}\ hash;}
+\DoxyCodeLine{00055\ \}}
+
+\end{DoxyCode}

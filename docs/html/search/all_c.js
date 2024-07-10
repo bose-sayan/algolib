@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['query_0',['query',['../structQuery.html',1,'Query'],['../structQuery.html#a1d0e75da55c111f5ae783f4589fb78d9',1,'Query::Query()']]]
+  ['platform_5fid_0',['platform_id',['../CMakeCCompilerId_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID:&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID:&#160;CMakeCXXCompilerId.cpp']]]
 ];

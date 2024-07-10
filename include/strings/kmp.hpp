@@ -1,5 +1,4 @@
-#ifndef KMP_H
-#define KMP_H
+#pragma once
 
 #include <numeric>
 #include <string>
@@ -68,5 +67,3 @@ vector<int> kmp(const string &text, const string &pattern) {
   }
   return matches;
 }
-
-#endif // KMP_H

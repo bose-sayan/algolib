@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['query_0',['Query',['../structQuery.html#a1d0e75da55c111f5ae783f4589fb78d9',1,'Query']]]
+  ['operator_28_29_0',['operator()',['../structcustom__hash.html#a01fd3ddf456ca7014a6b157646836de7',1,'custom_hash']]],
+  ['operator_3c_1',['operator&lt;',['../structQuery.html#ad9a89151dac7eeef3107d1d208f29099',1,'Query']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linear_5fsearch_2eh_0',['linear_search.h',['../linear__search_8h.html',1,'']]]
+  ['linear_5fsearch_2ehpp_0',['linear_search.hpp',['../linear__search_8hpp.html',1,'']]]
 ];

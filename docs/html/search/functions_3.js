@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kmp_0',['kmp',['../kmp_8h.html#a8ba12a8a05528a46cd0fb2dacb97fe2b',1,'kmp.h']]]
+  ['get_5fhash_0',['get_hash',['../zorbrist_8hpp.html#a8ee5a6e6a584fbff8a9b9798395a05fa',1,'zorbrist.hpp']]]
 ];

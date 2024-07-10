@@ -1,6 +1,4 @@
-#ifndef BINARY_SEARCH_H
-#define BINARY_SEARCH_H
-
+#pragma once
 #include <vector>
 
 /**
@@ -30,5 +28,3 @@ template <typename T> int binary_search(std::vector<T> const &v, T key) {
   }
   return -1;
 }
-
-#endif // BINARY_SEARCH_H

@@ -1,6 +1,4 @@
-#ifndef LINEAR_SEARCH_H
-#define LINEAR_SEARCH_H
-
+#pragma once
 #include <vector>
 /**
  * @brief Performs a linear search on a vector.
@@ -22,5 +20,3 @@ template <typename T> int linear_search(std::vector<T> const &v, T key) {
   }
   return -1;
 }
-
-#endif // LINEAR_SEARCH_H

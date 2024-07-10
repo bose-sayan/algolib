@@ -1,0 +1,77 @@
+\doxysection{include/range\+\_\+query/mos.hpp File Reference}
+\hypertarget{mos_8hpp}{}\label{mos_8hpp}\index{include/range\_query/mos.hpp@{include/range\_query/mos.hpp}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for mos.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{mos_8hpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structQuery}{Query}}
+\begin{DoxyCompactList}\small\item\em A structure to represent a query on a range \mbox{[}l, r\mbox{]} This structure represents a query on a range \mbox{[}l, r\mbox{]}. The structure contains an id to identify the query and the left and right endpoints of the range. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mos_8hpp_a6a0bf730544f3f42b293ed4748939e07}{remove\+\_\+idx}} (int)
+\item 
+void \mbox{\hyperlink{mos_8hpp_a4e12345c696234d124347621383e250b}{add\+\_\+idx}} (int)
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{mos_8hpp_a9f8b49ae7aee33bde4ac11fb9cc424a9}{answer\+Queries}} (vector$<$ \mbox{\hyperlink{structQuery}{Query}} $>$ \&queries)
+\begin{DoxyCompactList}\small\item\em Answer multiple queries on a range \mbox{[}l, r\mbox{]} using Mo\textquotesingle{}s algorithm This function answers multiple queries on a range \mbox{[}l, r\mbox{]} using Mo\textquotesingle{}s algorithm. The queries are sorted in increasing order of the left endpoint and then in increasing order of the right endpoint. The function maintains a data structure that reflects the range \mbox{[}l, r\mbox{]} and updates it as it moves from one query to the next. The function returns a vector of answers to the queries. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{mos_8hpp_a70b27761c7d0bd5cd90f4fe47e569b94}{block\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em The block size for Mo\textquotesingle{}s algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mos_8hpp_a4e12345c696234d124347621383e250b}\label{mos_8hpp_a4e12345c696234d124347621383e250b} 
+\index{mos.hpp@{mos.hpp}!add\_idx@{add\_idx}}
+\index{add\_idx@{add\_idx}!mos.hpp@{mos.hpp}}
+\doxysubsubsection{\texorpdfstring{add\_idx()}{add\_idx()}}
+{\footnotesize\ttfamily void add\+\_\+idx (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{mos_8hpp_a9f8b49ae7aee33bde4ac11fb9cc424a9}\label{mos_8hpp_a9f8b49ae7aee33bde4ac11fb9cc424a9} 
+\index{mos.hpp@{mos.hpp}!answerQueries@{answerQueries}}
+\index{answerQueries@{answerQueries}!mos.hpp@{mos.hpp}}
+\doxysubsubsection{\texorpdfstring{answerQueries()}{answerQueries()}}
+{\footnotesize\ttfamily vector$<$ int $>$ answer\+Queries (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{structQuery}{Query}} $>$ \&}]{queries }\end{DoxyParamCaption})}
+
+
+
+Answer multiple queries on a range \mbox{[}l, r\mbox{]} using Mo\textquotesingle{}s algorithm This function answers multiple queries on a range \mbox{[}l, r\mbox{]} using Mo\textquotesingle{}s algorithm. The queries are sorted in increasing order of the left endpoint and then in increasing order of the right endpoint. The function maintains a data structure that reflects the range \mbox{[}l, r\mbox{]} and updates it as it moves from one query to the next. The function returns a vector of answers to the queries. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queries} & A vector of \doxylink{structQuery}{Query} objects representing the queries. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$int$>$ A vector of integers representing the answers to the queries. 
+\end{DoxyReturn}
+\Hypertarget{mos_8hpp_a6a0bf730544f3f42b293ed4748939e07}\label{mos_8hpp_a6a0bf730544f3f42b293ed4748939e07} 
+\index{mos.hpp@{mos.hpp}!remove\_idx@{remove\_idx}}
+\index{remove\_idx@{remove\_idx}!mos.hpp@{mos.hpp}}
+\doxysubsubsection{\texorpdfstring{remove\_idx()}{remove\_idx()}}
+{\footnotesize\ttfamily void remove\+\_\+idx (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{mos_8hpp_a70b27761c7d0bd5cd90f4fe47e569b94}\label{mos_8hpp_a70b27761c7d0bd5cd90f4fe47e569b94} 
+\index{mos.hpp@{mos.hpp}!block\_size@{block\_size}}
+\index{block\_size@{block\_size}!mos.hpp@{mos.hpp}}
+\doxysubsubsection{\texorpdfstring{block\_size}{block\_size}}
+{\footnotesize\ttfamily int block\+\_\+size}
+
+
+
+The block size for Mo\textquotesingle{}s algorithm. 
+

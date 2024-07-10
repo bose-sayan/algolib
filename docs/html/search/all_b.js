@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['platform_5fid_0',['platform_id',['../CMakeCCompilerId_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID:&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID:&#160;CMakeCXXCompilerId.cpp']]]
+  ['of_20contents_0',['Table of Contents',['../md_README.html#autotoc_md1',1,'']]],
+  ['operator_28_29_1',['operator()',['../structcustom__hash.html#a01fd3ddf456ca7014a6b157646836de7',1,'custom_hash']]],
+  ['operator_3c_2',['operator&lt;',['../structQuery.html#ad9a89151dac7eeef3107d1d208f29099',1,'Query']]]
 ];

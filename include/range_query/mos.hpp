@@ -1,5 +1,4 @@
-#ifndef MOS_H
-#define MOS_H
+#pragma once
 
 #include <algorithm>
 #include <vector>
@@ -77,5 +76,3 @@ vector<int> answerQueries(vector<Query> &queries) {
   }
   return answers;
 }
-
-#endif // MOS_H

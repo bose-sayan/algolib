@@ -1,0 +1,61 @@
+\doxysection{include/hashing/zorbrist.hpp File Reference}
+\hypertarget{zorbrist_8hpp}{}\label{zorbrist_8hpp}\index{include/hashing/zorbrist.hpp@{include/hashing/zorbrist.hpp}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+set$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for zorbrist.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{zorbrist_8hpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcustom__hash}{custom\+\_\+hash}}
+\begin{DoxyCompactList}\small\item\em A custom hash function for hashing. This struct provides a custom hash function for hashing integers. The hash is a 64-\/bit integer. The hash is computed using the splitmix64 algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{zorbrist_8hpp_a8ee5a6e6a584fbff8a9b9798395a05fa}{get\+\_\+hash}} (const vector$<$ int $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Computes the hash of a vector. This function computes the hash of a vector of integers. The hash is computed by taking the xor of the hashes of the elements of the vector. The hash of an element is computed using the custom hash function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcustom__hash}{custom\+\_\+hash}} \mbox{\hyperlink{zorbrist_8hpp_a7ee09f60e416b7b80bff07f183119601}{rng}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{zorbrist_8hpp_a8ee5a6e6a584fbff8a9b9798395a05fa}\label{zorbrist_8hpp_a8ee5a6e6a584fbff8a9b9798395a05fa} 
+\index{zorbrist.hpp@{zorbrist.hpp}!get\_hash@{get\_hash}}
+\index{get\_hash@{get\_hash}!zorbrist.hpp@{zorbrist.hpp}}
+\doxysubsubsection{\texorpdfstring{get\_hash()}{get\_hash()}}
+{\footnotesize\ttfamily vector$<$ int $>$ get\+\_\+hash (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Computes the hash of a vector. This function computes the hash of a vector of integers. The hash is computed by taking the xor of the hashes of the elements of the vector. The hash of an element is computed using the custom hash function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The vector of integers for which to compute the hash. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$int$>$ The hash of the vector. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{zorbrist_8hpp_a7ee09f60e416b7b80bff07f183119601}\label{zorbrist_8hpp_a7ee09f60e416b7b80bff07f183119601} 
+\index{zorbrist.hpp@{zorbrist.hpp}!rng@{rng}}
+\index{rng@{rng}!zorbrist.hpp@{zorbrist.hpp}}
+\doxysubsubsection{\texorpdfstring{rng}{rng}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcustom__hash}{custom\+\_\+hash}} rng}
+

@@ -1,0 +1,15 @@
+\doxysection{linear\+\_\+search.\+hpp}
+\hypertarget{linear__search_8hpp_source}{}\label{linear__search_8hpp_source}\index{include/searching/linear\_search.hpp@{include/searching/linear\_search.hpp}}
+\mbox{\hyperlink{linear__search_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{linear__search_8hpp_a0d0ba3f44fc6dfe8e72c876376934041}{linear\_search}}(std::vector<T>\ \textcolor{keyword}{const}\ \&v,\ T\ key)\ \{}
+\DoxyCodeLine{00017\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ int(v.size());\ i++)\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{if}\ (v[i]\ ==\ key)}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ i;}
+\DoxyCodeLine{00020\ \ \ \}}
+\DoxyCodeLine{00021\ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00022\ \}}
+
+\end{DoxyCode}

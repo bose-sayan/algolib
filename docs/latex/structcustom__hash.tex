@@ -1,0 +1,54 @@
+\doxysection{custom\+\_\+hash Struct Reference}
+\hypertarget{structcustom__hash}{}\label{structcustom__hash}\index{custom\_hash@{custom\_hash}}
+
+
+A custom hash function for hashing. This struct provides a custom hash function for hashing integers. The hash is a 64-\/bit integer. The hash is computed using the splitmix64 algorithm.  
+
+
+
+
+{\ttfamily \#include $<$zorbrist.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structcustom__hash_a01fd3ddf456ca7014a6b157646836de7}{operator()}} (uint64\+\_\+t x) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{structcustom__hash_afe49e83f3738e1d5a5df471e2b425d86}{splitmix64}} (uint64\+\_\+t x)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A custom hash function for hashing. This struct provides a custom hash function for hashing integers. The hash is a 64-\/bit integer. The hash is computed using the splitmix64 algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The integer to hash. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t The hash of the integer. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structcustom__hash_a01fd3ddf456ca7014a6b157646836de7}\label{structcustom__hash_a01fd3ddf456ca7014a6b157646836de7} 
+\index{custom\_hash@{custom\_hash}!operator()@{operator()}}
+\index{operator()@{operator()}!custom\_hash@{custom\_hash}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily uint64\+\_\+t custom\+\_\+hash\+::operator() (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{x }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structcustom__hash_afe49e83f3738e1d5a5df471e2b425d86}\label{structcustom__hash_afe49e83f3738e1d5a5df471e2b425d86} 
+\index{custom\_hash@{custom\_hash}!splitmix64@{splitmix64}}
+\index{splitmix64@{splitmix64}!custom\_hash@{custom\_hash}}
+\doxysubsubsection{\texorpdfstring{splitmix64()}{splitmix64()}}
+{\footnotesize\ttfamily static uint64\+\_\+t custom\+\_\+hash\+::splitmix64 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/hashing/\mbox{\hyperlink{zorbrist_8hpp}{zorbrist.\+hpp}}\end{DoxyCompactItemize}

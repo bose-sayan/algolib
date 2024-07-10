@@ -1,0 +1,61 @@
+\doxysection{mos.\+hpp}
+\hypertarget{mos_8hpp_source}{}\label{mos_8hpp_source}\index{include/range\_query/mos.hpp@{include/range\_query/mos.hpp}}
+\mbox{\hyperlink{mos_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Global}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{mos_8hpp_a70b27761c7d0bd5cd90f4fe47e569b94}{block\_size}};\ \textcolor{comment}{//\ Todo:\ Set\ appropriate\ block\ size}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structQuery}{Query}}\ \{}
+\DoxyCodeLine{00023\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structQuery_a91d870cd7961c6c7c17330560e29184a}{l}},\ \mbox{\hyperlink{structQuery_ab0224199f45d9cf26a93e2dcfcc94ef3}{r}},\ \mbox{\hyperlink{structQuery_a3f961ca1a9c82eda79aef080b00a91ef}{id}};}
+\DoxyCodeLine{00024\ \ \ \mbox{\hyperlink{structQuery_a1d0e75da55c111f5ae783f4589fb78d9}{Query}}(\textcolor{keywordtype}{int}\ L,\ \textcolor{keywordtype}{int}\ R,\ \textcolor{keywordtype}{int}\ idx)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ this-\/>l\ =\ L;}
+\DoxyCodeLine{00026\ \ \ \ \ this-\/>r\ =\ R;}
+\DoxyCodeLine{00027\ \ \ \ \ this-\/>\textcolor{keywordtype}{id}\ =\ idx;}
+\DoxyCodeLine{00028\ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structQuery_ad9a89151dac7eeef3107d1d208f29099}{operator<}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structQuery}{Query}}\ \&other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{return}\ make\_pair(\mbox{\hyperlink{structQuery_a91d870cd7961c6c7c17330560e29184a}{l}}\ /\ \mbox{\hyperlink{mos_8hpp_a70b27761c7d0bd5cd90f4fe47e569b94}{block\_size}},\ \mbox{\hyperlink{structQuery_ab0224199f45d9cf26a93e2dcfcc94ef3}{r}})\ <}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ make\_pair(other.\mbox{\hyperlink{structQuery_a91d870cd7961c6c7c17330560e29184a}{l}}\ /\ \mbox{\hyperlink{mos_8hpp_a70b27761c7d0bd5cd90f4fe47e569b94}{block\_size}},\ other.\mbox{\hyperlink{structQuery_ab0224199f45d9cf26a93e2dcfcc94ef3}{r}});}
+\DoxyCodeLine{00032\ \ \ \}}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{mos_8hpp_a6a0bf730544f3f42b293ed4748939e07}{remove\_idx}}(\textcolor{keywordtype}{int});\ \textcolor{comment}{//\ Todo:\ Remove\ value\ at\ index\ from\ the\ data\ structure}}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{mos_8hpp_a4e12345c696234d124347621383e250b}{add\_idx}}(\textcolor{keywordtype}{int});\ \ \ \ \textcolor{comment}{//\ Todo:\ Add\ value\ at\ index\ to\ the\ data\ structure}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00050\ vector<int>\ \mbox{\hyperlink{mos_8hpp_a9f8b49ae7aee33bde4ac11fb9cc424a9}{answerQueries}}(vector<Query>\ \&queries)\ \{}
+\DoxyCodeLine{00051\ \ \ vector<int>\ answers(queries.size());}
+\DoxyCodeLine{00052\ \ \ sort(queries.begin(),\ queries.end());}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \textcolor{comment}{//\ Todo:\ Initialize\ the\ data\ structure}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \textcolor{keywordtype}{int}\ curL\ =\ 0,}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ curR\ =\ 0;\ \textcolor{comment}{//\ The\ data\ structure\ will\ always\ reflect\ the\ range\ [curL,\ curR]}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \textcolor{comment}{//\ Todo:\ insert\ first\ index\ element\ to\ data\ structure}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{structQuery}{Query}}\ \&q\ :\ queries)\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{while}\ (curL\ >\ q.l)\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \mbox{\hyperlink{mos_8hpp_a4e12345c696234d124347621383e250b}{add\_idx}}(-\/-\/curL);}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{while}\ (curR\ <\ q.r)\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \mbox{\hyperlink{mos_8hpp_a4e12345c696234d124347621383e250b}{add\_idx}}(++curR);}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordflow}{while}\ (curL\ <\ q.l)\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \mbox{\hyperlink{mos_8hpp_a6a0bf730544f3f42b293ed4748939e07}{remove\_idx}}(curL++);}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{while}\ (curR\ >\ q.r)\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \mbox{\hyperlink{mos_8hpp_a6a0bf730544f3f42b293ed4748939e07}{remove\_idx}}(curR-\/-\/);}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ answers[q.id]\ =\ -\/1;\ \textcolor{comment}{//\ Todo:\ Get\ correct\ answer\ for\ the\ current\ range\ from}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ data\ structure}}
+\DoxyCodeLine{00076\ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \textcolor{keywordflow}{return}\ answers;}
+\DoxyCodeLine{00078\ \}}
+
+\end{DoxyCode}
