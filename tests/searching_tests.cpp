@@ -1,8 +1,8 @@
 #include <cassert>
 #include <iostream>
 
-#include "searching/binary_search.h"
-#include "searching/linear_search.h"
+#include "searching/binary_search.hpp"
+#include "searching/linear_search.hpp"
 
 void test_binary_search() {
   std::vector<int> v1 = {1, 2, 3, 4, 5, 6, 7, 8, 9};

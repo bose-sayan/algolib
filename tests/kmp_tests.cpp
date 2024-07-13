@@ -1,7 +1,7 @@
 #include <cassert>
 #include <iostream>
 
-#include "strings/kmp.h"
+#include "strings/kmp.hpp"
 
 void test_prefix_function() {
   std::string s = "abacaba";
