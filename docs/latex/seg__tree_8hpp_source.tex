@@ -1,0 +1,75 @@
+\doxysection{seg\+\_\+tree.\+hpp}
+\hypertarget{seg__tree_8hpp_source}{}\label{seg__tree_8hpp_source}\index{include/range\_query/seg\_tree.hpp@{include/range\_query/seg\_tree.hpp}}
+\mbox{\hyperlink{seg__tree_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structSegTree}{SegTree}}\ \{}
+\DoxyCodeLine{00018\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structSegTree_a96d7364f00b551a014101f0f9ff0f5c1}{lb}},\ \mbox{\hyperlink{structSegTree_afec230dcb0594b1ad1c9fef51e310563}{rb}};}
+\DoxyCodeLine{00019\ \ \ T\ \mbox{\hyperlink{structSegTree_a91b2c0179ea5a6eabbb6b3650f9cfc42}{data}};}
+\DoxyCodeLine{00020\ \ \ \mbox{\hyperlink{structSegTree}{SegTree}}\ *\mbox{\hyperlink{structSegTree_aac10bee9e18c0ae8853305c4e4022e48}{left}},\ *\mbox{\hyperlink{structSegTree_a7155c0e982cba422e1004aa4fa02dd58}{right}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \textcolor{comment}{//\ Combine\ operation}}
+\DoxyCodeLine{00023\ \ \ T\ \mbox{\hyperlink{structSegTree_aab18a28d6336d743172ef3c52d9d5cd0}{combine}}(\textcolor{keyword}{const}\ T\ \&a,\ \textcolor{keyword}{const}\ T\ \&b)\ \{\ \textcolor{keywordflow}{return}\ a\ +\ b;\ \}\ \textcolor{comment}{//\ TODO:\ change\ this}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00026\ \ \ \mbox{\hyperlink{structSegTree_a9aa902a0c734098a1001542b963b7e01}{SegTree}}()\ :\ \mbox{\hyperlink{structSegTree_a96d7364f00b551a014101f0f9ff0f5c1}{lb}}(0),\ \mbox{\hyperlink{structSegTree_afec230dcb0594b1ad1c9fef51e310563}{rb}}(0),\ \mbox{\hyperlink{structSegTree_a91b2c0179ea5a6eabbb6b3650f9cfc42}{data}}(),\ \mbox{\hyperlink{structSegTree_aac10bee9e18c0ae8853305c4e4022e48}{left}}(nullptr),\ \mbox{\hyperlink{structSegTree_a7155c0e982cba422e1004aa4fa02dd58}{right}}(nullptr)\ \{\}}
+\DoxyCodeLine{00027\ \ \ \mbox{\hyperlink{structSegTree_a502eabf32d1347a3f70ce0acf4356d61}{SegTree}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&l,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&r)\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{structSegTree_a96d7364f00b551a014101f0f9ff0f5c1}{lb}}\ =\ l,\ \mbox{\hyperlink{structSegTree_afec230dcb0594b1ad1c9fef51e310563}{rb}}\ =\ r;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (l\ ==\ r)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \mbox{\hyperlink{structSegTree_a91b2c0179ea5a6eabbb6b3650f9cfc42}{data}}\ =\ T();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \mbox{\hyperlink{structSegTree_aac10bee9e18c0ae8853305c4e4022e48}{left}}\ =\ \mbox{\hyperlink{structSegTree_a7155c0e982cba422e1004aa4fa02dd58}{right}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ m\ =\ (l\ +\ r)\ /\ 2;}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{structSegTree_aac10bee9e18c0ae8853305c4e4022e48}{left}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structSegTree_a9aa902a0c734098a1001542b963b7e01}{SegTree}}(l,\ m);}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{structSegTree_a7155c0e982cba422e1004aa4fa02dd58}{right}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structSegTree_a9aa902a0c734098a1001542b963b7e01}{SegTree}}(m\ +\ 1,\ r);}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{structSegTree_a91b2c0179ea5a6eabbb6b3650f9cfc42}{data}}\ =\ \mbox{\hyperlink{structSegTree_aab18a28d6336d743172ef3c52d9d5cd0}{combine}}(\mbox{\hyperlink{structSegTree_aac10bee9e18c0ae8853305c4e4022e48}{left}}-\/>\mbox{\hyperlink{structSegTree_a91b2c0179ea5a6eabbb6b3650f9cfc42}{data}},\ \mbox{\hyperlink{structSegTree_a7155c0e982cba422e1004aa4fa02dd58}{right}}-\/>\mbox{\hyperlink{structSegTree_a91b2c0179ea5a6eabbb6b3650f9cfc42}{data}});}
+\DoxyCodeLine{00038\ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \mbox{\hyperlink{structSegTree_a7b20278807ee2aa041f230d64b6305fa}{SegTree}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&l,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&r,\ \textcolor{keyword}{const}\ std::vector<T>\ \&v)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{structSegTree_a96d7364f00b551a014101f0f9ff0f5c1}{lb}}\ =\ l,\ \mbox{\hyperlink{structSegTree_afec230dcb0594b1ad1c9fef51e310563}{rb}}\ =\ r;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{if}\ (l\ ==\ r)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \mbox{\hyperlink{structSegTree_a91b2c0179ea5a6eabbb6b3650f9cfc42}{data}}\ =\ v[l];}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \mbox{\hyperlink{structSegTree_aac10bee9e18c0ae8853305c4e4022e48}{left}}\ =\ \mbox{\hyperlink{structSegTree_a7155c0e982cba422e1004aa4fa02dd58}{right}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ m\ =\ (l\ +\ r)\ /\ 2;}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{structSegTree_aac10bee9e18c0ae8853305c4e4022e48}{left}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structSegTree_a9aa902a0c734098a1001542b963b7e01}{SegTree}}(l,\ m,\ v);}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{structSegTree_a7155c0e982cba422e1004aa4fa02dd58}{right}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structSegTree_a9aa902a0c734098a1001542b963b7e01}{SegTree}}(m\ +\ 1,\ r,\ v);}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{structSegTree_a91b2c0179ea5a6eabbb6b3650f9cfc42}{data}}\ =\ \mbox{\hyperlink{structSegTree_aab18a28d6336d743172ef3c52d9d5cd0}{combine}}(\mbox{\hyperlink{structSegTree_aac10bee9e18c0ae8853305c4e4022e48}{left}}-\/>\mbox{\hyperlink{structSegTree_a91b2c0179ea5a6eabbb6b3650f9cfc42}{data}},\ \mbox{\hyperlink{structSegTree_a7155c0e982cba422e1004aa4fa02dd58}{right}}-\/>\mbox{\hyperlink{structSegTree_a91b2c0179ea5a6eabbb6b3650f9cfc42}{data}});}
+\DoxyCodeLine{00050\ \ \ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \textcolor{comment}{//\ Destructor}}
+\DoxyCodeLine{00053\ \ \ \mbox{\hyperlink{structSegTree_ae944738a3bcd87ae1352f0b2977a523d}{\string~SegTree}}()\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{structSegTree_aac10bee9e18c0ae8853305c4e4022e48}{left}})}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{structSegTree_aac10bee9e18c0ae8853305c4e4022e48}{left}};}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{structSegTree_a7155c0e982cba422e1004aa4fa02dd58}{right}})}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{structSegTree_a7155c0e982cba422e1004aa4fa02dd58}{right}};}
+\DoxyCodeLine{00058\ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \textcolor{comment}{//\ Update\ operation}}
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structSegTree_a63b2d0d3e681e6e36e7a69a6c4c90aca}{update}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&idx,\ \textcolor{keyword}{const}\ T\ \&val)\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{structSegTree_a96d7364f00b551a014101f0f9ff0f5c1}{lb}}\ ==\ \mbox{\hyperlink{structSegTree_afec230dcb0594b1ad1c9fef51e310563}{rb}})\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \mbox{\hyperlink{structSegTree_a91b2c0179ea5a6eabbb6b3650f9cfc42}{data}}\ =\ val;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{if}\ (idx\ <=\ left-\/>\mbox{\hyperlink{structSegTree_afec230dcb0594b1ad1c9fef51e310563}{rb}})}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \mbox{\hyperlink{structSegTree_aac10bee9e18c0ae8853305c4e4022e48}{left}}-\/>\mbox{\hyperlink{structSegTree_a63b2d0d3e681e6e36e7a69a6c4c90aca}{update}}(idx,\ val);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \mbox{\hyperlink{structSegTree_a7155c0e982cba422e1004aa4fa02dd58}{right}}-\/>\mbox{\hyperlink{structSegTree_a63b2d0d3e681e6e36e7a69a6c4c90aca}{update}}(idx,\ val);}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{structSegTree_a91b2c0179ea5a6eabbb6b3650f9cfc42}{data}}\ =\ \mbox{\hyperlink{structSegTree_aab18a28d6336d743172ef3c52d9d5cd0}{combine}}(\mbox{\hyperlink{structSegTree_aac10bee9e18c0ae8853305c4e4022e48}{left}}-\/>\mbox{\hyperlink{structSegTree_a91b2c0179ea5a6eabbb6b3650f9cfc42}{data}},\ \mbox{\hyperlink{structSegTree_a7155c0e982cba422e1004aa4fa02dd58}{right}}-\/>\mbox{\hyperlink{structSegTree_a91b2c0179ea5a6eabbb6b3650f9cfc42}{data}});}
+\DoxyCodeLine{00071\ \ \ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \textcolor{comment}{//\ Query\ operation}}
+\DoxyCodeLine{00074\ \ \ T\ \mbox{\hyperlink{structSegTree_afd65051c72563693514ae7b0ce06b7f4}{query}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&l,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&r)\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{if}\ (l\ >\ \mbox{\hyperlink{structSegTree_afec230dcb0594b1ad1c9fef51e310563}{rb}}\ ||\ r\ <\ \mbox{\hyperlink{structSegTree_a96d7364f00b551a014101f0f9ff0f5c1}{lb}})}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ T();\ \textcolor{comment}{//\ TODO:\ return\ identity\ element}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{if}\ (l\ <=\ \mbox{\hyperlink{structSegTree_a96d7364f00b551a014101f0f9ff0f5c1}{lb}}\ \&\&\ \mbox{\hyperlink{structSegTree_afec230dcb0594b1ad1c9fef51e310563}{rb}}\ <=\ r)}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structSegTree_a91b2c0179ea5a6eabbb6b3650f9cfc42}{data}};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structSegTree_aab18a28d6336d743172ef3c52d9d5cd0}{combine}}(\mbox{\hyperlink{structSegTree_aac10bee9e18c0ae8853305c4e4022e48}{left}}-\/>\mbox{\hyperlink{structSegTree_afd65051c72563693514ae7b0ce06b7f4}{query}}(l,\ r),\ \mbox{\hyperlink{structSegTree_a7155c0e982cba422e1004aa4fa02dd58}{right}}-\/>\mbox{\hyperlink{structSegTree_afd65051c72563693514ae7b0ce06b7f4}{query}}(l,\ r));}
+\DoxyCodeLine{00080\ \ \ \}}
+\DoxyCodeLine{00081\ \};}
+
+\end{DoxyCode}

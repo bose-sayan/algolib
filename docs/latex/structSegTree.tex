@@ -1,0 +1,171 @@
+\doxysection{Seg\+Tree\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{structSegTree}{}\label{structSegTree}\index{SegTree$<$ T $>$@{SegTree$<$ T $>$}}
+
+
+Segment Tree.  
+
+
+
+
+{\ttfamily \#include $<$seg\+\_\+tree.\+hpp$>$}
+
+
+
+Collaboration diagram for Seg\+Tree\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{structSegTree__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{structSegTree_aab18a28d6336d743172ef3c52d9d5cd0}{combine}} (const T \&a, const T \&b)
+\item 
+\mbox{\hyperlink{structSegTree_a9aa902a0c734098a1001542b963b7e01}{Seg\+Tree}} ()
+\item 
+\mbox{\hyperlink{structSegTree_a502eabf32d1347a3f70ce0acf4356d61}{Seg\+Tree}} (const int \&l, const int \&r)
+\item 
+\mbox{\hyperlink{structSegTree_a7b20278807ee2aa041f230d64b6305fa}{Seg\+Tree}} (const int \&l, const int \&r, const std\+::vector$<$ T $>$ \&v)
+\item 
+\mbox{\hyperlink{structSegTree_ae944738a3bcd87ae1352f0b2977a523d}{\texorpdfstring{$\sim$}{\string~}\+Seg\+Tree}} ()
+\item 
+void \mbox{\hyperlink{structSegTree_a63b2d0d3e681e6e36e7a69a6c4c90aca}{update}} (const int \&idx, const T \&val)
+\item 
+T \mbox{\hyperlink{structSegTree_afd65051c72563693514ae7b0ce06b7f4}{query}} (const int \&l, const int \&r)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structSegTree_a96d7364f00b551a014101f0f9ff0f5c1}{lb}}
+\item 
+int \mbox{\hyperlink{structSegTree_afec230dcb0594b1ad1c9fef51e310563}{rb}}
+\item 
+T \mbox{\hyperlink{structSegTree_a91b2c0179ea5a6eabbb6b3650f9cfc42}{data}}
+\item 
+\mbox{\hyperlink{structSegTree}{Seg\+Tree}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structSegTree_aac10bee9e18c0ae8853305c4e4022e48}{left}}
+\item 
+\mbox{\hyperlink{structSegTree}{Seg\+Tree}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structSegTree_a7155c0e982cba422e1004aa4fa02dd58}{right}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+struct Seg\+Tree$<$ T $>$}
+Segment Tree. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of data\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyNote}{Note}
+1. 0-\/based indexing
+\begin{DoxyEnumerate}
+\item Default combine operation is sum
+\item Default identity element is 0
+\item Default update operation is assignment
+\item Default query operation is range sum
+\item Change combine, identity, update, query functions as needed 
+\end{DoxyEnumerate}
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structSegTree_a9aa902a0c734098a1001542b963b7e01}\label{structSegTree_a9aa902a0c734098a1001542b963b7e01} 
+\index{SegTree$<$ T $>$@{SegTree$<$ T $>$}!SegTree@{SegTree}}
+\index{SegTree@{SegTree}!SegTree$<$ T $>$@{SegTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SegTree()}{SegTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structSegTree}{Seg\+Tree}}$<$ T $>$\mbox{\hyperlink{structSegTree}{\+::\+Seg\+Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structSegTree_a502eabf32d1347a3f70ce0acf4356d61}\label{structSegTree_a502eabf32d1347a3f70ce0acf4356d61} 
+\index{SegTree$<$ T $>$@{SegTree$<$ T $>$}!SegTree@{SegTree}}
+\index{SegTree@{SegTree}!SegTree$<$ T $>$@{SegTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SegTree()}{SegTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structSegTree}{Seg\+Tree}}$<$ T $>$\mbox{\hyperlink{structSegTree}{\+::\+Seg\+Tree}} (\begin{DoxyParamCaption}\item[{const int \&}]{l,  }\item[{const int \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structSegTree_a7b20278807ee2aa041f230d64b6305fa}\label{structSegTree_a7b20278807ee2aa041f230d64b6305fa} 
+\index{SegTree$<$ T $>$@{SegTree$<$ T $>$}!SegTree@{SegTree}}
+\index{SegTree@{SegTree}!SegTree$<$ T $>$@{SegTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SegTree()}{SegTree()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structSegTree}{Seg\+Tree}}$<$ T $>$\mbox{\hyperlink{structSegTree}{\+::\+Seg\+Tree}} (\begin{DoxyParamCaption}\item[{const int \&}]{l,  }\item[{const int \&}]{r,  }\item[{const std\+::vector$<$ T $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structSegTree_ae944738a3bcd87ae1352f0b2977a523d}\label{structSegTree_ae944738a3bcd87ae1352f0b2977a523d} 
+\index{SegTree$<$ T $>$@{SegTree$<$ T $>$}!````~SegTree@{\texorpdfstring{$\sim$}{\string~}SegTree}}
+\index{````~SegTree@{\texorpdfstring{$\sim$}{\string~}SegTree}!SegTree$<$ T $>$@{SegTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SegTree()}{\string~SegTree()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structSegTree}{Seg\+Tree}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{structSegTree}{Seg\+Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structSegTree_aab18a28d6336d743172ef3c52d9d5cd0}\label{structSegTree_aab18a28d6336d743172ef3c52d9d5cd0} 
+\index{SegTree$<$ T $>$@{SegTree$<$ T $>$}!combine@{combine}}
+\index{combine@{combine}!SegTree$<$ T $>$@{SegTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{combine()}{combine()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{structSegTree}{Seg\+Tree}}$<$ T $>$\+::combine (\begin{DoxyParamCaption}\item[{const T \&}]{a,  }\item[{const T \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structSegTree_afd65051c72563693514ae7b0ce06b7f4}\label{structSegTree_afd65051c72563693514ae7b0ce06b7f4} 
+\index{SegTree$<$ T $>$@{SegTree$<$ T $>$}!query@{query}}
+\index{query@{query}!SegTree$<$ T $>$@{SegTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{structSegTree}{Seg\+Tree}}$<$ T $>$\+::query (\begin{DoxyParamCaption}\item[{const int \&}]{l,  }\item[{const int \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structSegTree_a63b2d0d3e681e6e36e7a69a6c4c90aca}\label{structSegTree_a63b2d0d3e681e6e36e7a69a6c4c90aca} 
+\index{SegTree$<$ T $>$@{SegTree$<$ T $>$}!update@{update}}
+\index{update@{update}!SegTree$<$ T $>$@{SegTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{structSegTree}{Seg\+Tree}}$<$ T $>$\+::update (\begin{DoxyParamCaption}\item[{const int \&}]{idx,  }\item[{const T \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structSegTree_a91b2c0179ea5a6eabbb6b3650f9cfc42}\label{structSegTree_a91b2c0179ea5a6eabbb6b3650f9cfc42} 
+\index{SegTree$<$ T $>$@{SegTree$<$ T $>$}!data@{data}}
+\index{data@{data}!SegTree$<$ T $>$@{SegTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{structSegTree}{Seg\+Tree}}$<$ T $>$\+::data}
+
+\Hypertarget{structSegTree_a96d7364f00b551a014101f0f9ff0f5c1}\label{structSegTree_a96d7364f00b551a014101f0f9ff0f5c1} 
+\index{SegTree$<$ T $>$@{SegTree$<$ T $>$}!lb@{lb}}
+\index{lb@{lb}!SegTree$<$ T $>$@{SegTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{lb}{lb}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{structSegTree}{Seg\+Tree}}$<$ T $>$\+::lb}
+
+\Hypertarget{structSegTree_aac10bee9e18c0ae8853305c4e4022e48}\label{structSegTree_aac10bee9e18c0ae8853305c4e4022e48} 
+\index{SegTree$<$ T $>$@{SegTree$<$ T $>$}!left@{left}}
+\index{left@{left}!SegTree$<$ T $>$@{SegTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structSegTree}{Seg\+Tree}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structSegTree}{Seg\+Tree}}$<$ T $>$\+::left}
+
+\Hypertarget{structSegTree_afec230dcb0594b1ad1c9fef51e310563}\label{structSegTree_afec230dcb0594b1ad1c9fef51e310563} 
+\index{SegTree$<$ T $>$@{SegTree$<$ T $>$}!rb@{rb}}
+\index{rb@{rb}!SegTree$<$ T $>$@{SegTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{rb}{rb}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{structSegTree}{Seg\+Tree}}$<$ T $>$\+::rb}
+
+\Hypertarget{structSegTree_a7155c0e982cba422e1004aa4fa02dd58}\label{structSegTree_a7155c0e982cba422e1004aa4fa02dd58} 
+\index{SegTree$<$ T $>$@{SegTree$<$ T $>$}!right@{right}}
+\index{right@{right}!SegTree$<$ T $>$@{SegTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structSegTree}{Seg\+Tree}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structSegTree}{Seg\+Tree}}$<$ T $>$\+::right}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/range\+\_\+query/\mbox{\hyperlink{seg__tree_8hpp}{seg\+\_\+tree.\+hpp}}\end{DoxyCompactItemize}
